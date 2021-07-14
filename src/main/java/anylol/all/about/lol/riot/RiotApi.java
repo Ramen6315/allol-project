@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(value = "riotApi", url = "https://kr.api.riotgames.com", configuration = {FeignConfiguration.class})
 public interface RiotApi {
 
-    @GetMapping(value = "/lol/summoner/v4/summoners/by-name/{summonerName}?api_key=")
+    @GetMapping(value = "/lol/summoner/v4/summoners/by-name/{summonerName}?api_key=RGAPI-169b3f19-5298-4224-bfa7-811f3ed7d4dd")
     Summoner getSummoner(@PathVariable("summonerName") String summonerName);
 }
