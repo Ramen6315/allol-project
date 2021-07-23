@@ -17,6 +17,7 @@ public class SummonerService {
     @Autowired
     SummonerRepository summonerRepository;
 
+
     public Summoner getSummoner(String summonerName) {
         if(summonerRepository.existsByName(summonerName)) {
             Summoner existSummoner = summonerRepository.findByName(summonerName);
