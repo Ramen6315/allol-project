@@ -10,13 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class SummonerService {
-
     @Autowired
     RiotApi riotApi;
 
     @Autowired
     SummonerRepository summonerRepository;
-
 
     public Summoner getSummoner(String summonerName) {
         if(summonerRepository.existsByName(summonerName)) {

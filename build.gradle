@@ -27,7 +27,6 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-	implementation "com.merakianalytics.orianna:orianna:4.0.0-SNAPSHOT"
 }
 
 test {
