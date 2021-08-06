@@ -1,5 +1,6 @@
 package anylol.all.about.lol.service;
 
+import anylol.all.about.lol.domain.MatchList;
 import anylol.all.about.lol.domain.Summoner;
 import anylol.all.about.lol.repository.SummonerRepository;
 import anylol.all.about.lol.riot.RiotApi;
@@ -25,5 +26,10 @@ public class SummonerService {
         Summoner summoner = riotApi.getSummoner(summonerName);
 
         return summonerRepository.save(summoner);
+    }
+
+    public MatchList getMatches(String summonerName) {
+        Summoner summoner = summonerRepository.findByName(summonerName);
+        return riotApi.getMatches(summoner.getAccountId());
     }
 }
